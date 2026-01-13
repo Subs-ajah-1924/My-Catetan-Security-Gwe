@@ -1,0 +1,84 @@
+
+60 menit setiap pagi {
+- Baca Doc kemarin
+- Nambah command linux
+}
+
+Doc Linux CLI {
+- **pwd** : ngedohi nek direktori ndi
+- **cd** : kanggo masok sebuah directori
+- **ls** : kanggo ndelok ini directori
+- **touch** : kanggo nggawe file
+- **file** : output e ngei jenis karo keterangan file e
+- **cat** : koyok nampilno teks langsung nek terminal
+- **less**: hampir podo koyok cat,cuman iki koyok melbu nek nggon lio
+- **history**: kanggo ngecek history commandmu
+- **cp** : copy file 
+	- cp sumber tujuan (kanggo file)
+	- cp -r sumber tujuan (kanggo folder)
+	- cp nama_file Document/nama_baru(kanggo genti jengen)
+- **mv** : move file 
+	- mv dumber tujuan(file)
+	- mv -r sumber tujuan(folder)
+	- mv nama_lama nama_baru(genti jengen)
+- **mkdir** : kanggo nggawe folder/dir
+- **rm** : kanggo hapus
+	- orang sigma akan rm -rf /*
+- **find**: kanggo luru file/folder
+	- find /home -name nama_file(file)
+	- find /home -type d -name nama_folder(folder)
+- **help** : kanggo ngei reti seputar CLI ne ----------------->
+- **man** : podo kyok help cuman versi notebook-------->{3 iki podo command e :cli syntax}
+- **whatis** : ngei pengertian sak baris tok enak ---------->
+- **alias** : koyok variabel ngono laya
+- **exit** : kanggo metu terminal/session
+
+- ===================================
+- **stdout**(>):kanggo ngetokno input seng di wei
+	- echo hello world =iku kanggo ngetokno inputan nek terminal
+	- echo hello world > file.txt =iku kanggo masukno inputan ngo file,misal file e rak ono nko otomatis nggawe anyar
+	- echo hello world >> file.txt = iku kanggo masukno inputan ngo file dan di dokok akhir otomatis,misal file e rak ono nko otomatis gawe anyar
+- **stdin**(<):kanggo ngelebokno inputan seng di wei
+	- cat < file.txt > file1.txt = artine njikok teks nek file.txt trs di jikok trs di dokok nek file1.txt
+- **stderr**(2>):kanggo ngetokono error tko program seng error
+	- ls fake/dir 2> file.txt = ngelebokno error e ngo file tapi ijeh metu nek terminal
+	- ls fake/dir > file.txt 2>&1 = ngelebokno  error ngo file trs nek terminal rak di tokno
+- **pipeline**(|):digunakan untuk menggabungkan dua atau lebih command sekaligus.contoh:
+	- ls -la / | less ,ini akan mengeksekusi bagian kiri dulu lalu bagian kanan.bagian kiri adalh stdout sedangkan di bagian kanan adalah stdiin.ini salin gberhubungan samapi akhir dari pipeline
+	- ls -la / | grep "conf" | cat,ini sama seperti atas.ls -la / (stdout) | masuk ke grep(stdin) lalu grep akan seksekusi(stdout) | masuk ke cat(stdin)  | dst
+- **tee**:digunakan untuk memisah output dan memasukkannya ke terminal,file atau yang lainnya.contoh :
+	- ls -la | tee : ini akan menuliskan output ke terminal saja,sama seperti cat
+	- ls -la | tee file.txt : ini akan menuliskan output ke file yang di pilih
+	- ls -la | tee file.txt file1.txt file2.txt : memasukkan ke muti file
+	- ls -la | tee -a file.tzt : ini akan meng append ke file yang dipilih
+- **env**:digunakan untuk melihat semua environment variable yang tersedia.environment variabel adalah variable yang digunakan oleh sistem untuk melakukan proses tertentu.contoh:
+	- env : melihat semau evn variabel
+	- echo $SHELL : meliaht isi dari variable $SHELL
+	- misal pengen nambah variabel dewe,iku nambahnone nek .bashrc/sesuai jenis shellmu.command nambahnone:
+		- export MONGO_URI="mongodb://user:pass@localhost/db",iki bakal nambah variable seng jengene MONGO_URI
+- **cut** :memotong atau mengambil bagian tertentudari teks.contoh:
+	- d flag = kanggo mbatesi ben kepisah(delimeter).contoh:
+		- cut -d: -f1 file.txt = artine ngetokno field .field 1 iku sak hurunge delimeter e (:).batesane dokok nek pinggir delimeter e (:)
+	- f flag = kanggo nentukno kolom ndi seng ape dijikok.contoh: 
+		- cut -d: -f2 file.txt = iki jikuk field/kolom 2 
+		- cut -d: -f2,4 file.txt = iki jikok kolom 2 sampek 4
+	- c flag = mengambil berdasarkan karakter/huruf.contoh:
+		- cut -c1,5 file.txt = berarti iki jikok huruf 1 ambel 5
+		- cut -c1,2,5,6 = iki jikok hirif 1,2,5 karo 6
+		- cut -c1-5 = iki jikuk huruf 1 sampek 2
+	- s flag = tidak menampilkan baris yang tidak mengandung delimeter.contoh:
+		- cut -d: -f1 -s file.txt
+- **paste** : kanggo nggabung beberapa semua baris menjadi 1 baris.default delimeter e iki adalah TAB  dadi iso ngenecontoh:
+	- s flag : default flag yang harus ada pada saat command.contoh:
+		- paste -s file.txt = iki bakal ndadekno baris baris berbeda dadi satu baris
+	- d flag = kanggo ngisi delimeter e iku mou.contoh:
+		- paste -d"-" -s file.txt = iki bakal nggenti tab mou dadi streop " -"
+		- paste -d" '' -s file.txt = iki bakal nggenti tab mou dadi spasi " "
+- **head**:output e iku 10 baris pertama dari sebuah dile.iki cocok kanggo file seng tulisane wakih dan males skrol.contoh:
+	- head configuration.conf  = iki bakal ngetokno 10 baris pertama nek file configuration.conf
+	- head -n 20 file.txt = iki bakal ngetokno 20/sesuai angkane 
+- **tail**:hampir podo koyok head,tapi versi mburi.podo 10 baris dan gas contoh e:
+	- tail  file.txt 
+	- tail -n 20 file.txt 
+	- tail -f file.txt = kanggo ngeti data realtime.misal file file sistem seng enak.apsi
+} 
