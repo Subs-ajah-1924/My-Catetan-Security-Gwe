@@ -1,4 +1,1 @@
-Welcome selamat datang di my repo gwe
-iki repo kanggo nyimpen my catetan seng mahal dan kelas ben iso tak woco liwat hp
-iki adalah awal my untuk menjadi hengkel pro vs noob vs god
-dan aku sigma sekali
+Welcome selamat datang di my repo gwe.iki adalah repo kanggo nyimpen my catetan gwe.sesok gwe akan dadi opo enak e,mbuh pokok e sak dadine.mugo mugo dadi si amin.iki tak ketik dewe baydewey dan ws si.iki tanggal 16 januari dan wpm ku iku 61 paleng apik
