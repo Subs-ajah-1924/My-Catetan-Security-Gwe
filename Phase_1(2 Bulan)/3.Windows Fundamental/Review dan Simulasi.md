@@ -1,14 +1,9 @@
-awab TANPA CATATAN:
-- Kenapa Windows sering di-attack?
-- Bedanya user vs admin?
-- Service itu apa dan kenapa penting?
-- Registry dipakai buat apa?
-- Kenapa “Run as Admin” berbahaya kalau asal klik?
-
-Kalau masih bingung → ulang hari terkait.
-### 🌅 PAGI
-
-Review ringan  
-❌ Jangan belajar hal baru
-
 Kesimpulan??
+Windows adalah sebuan Sistem Operasi yang dibuat oleh microsoft dan merupakan Sistem Operasi yang paling banyak di dunia.Windows biasanya sudah terpasang default di setiap laptop dan memiliki banyak fitur fitur seperty office,kemudahan dalam akses aplikasi,gaming,dll.
+Tetapi Windows sering kali menjadi target penyerangan attacker karena berbagai alasan mulai dari pengguna yang lalai,celah celah sistem dan virus virus mudah berkembang di dalam Windows.
+
+User dan Group Windows berfungsi sebagai identitas untuk menjalankan berbagai proses di sistem.User biasanya berisi SID,Username,Password dan setiap user biasanya memiliki token.token dibuat setelah user login kemudian token akan diberikan ke user.terdapat 2 token,Filtered dan Elevated.Filtered iku podo wae koyok privilege user biasa,dadi proses seng di jalanno nko nggowo user privilege. sedangkan seng elevated biasane dinggo kanggo proses seng jalan sebagai administrator "Run As Administrator",iki nggowo token Elevated.iki agak bedo karo sudo nek linux(woco dewe nek linux fundamental).
+
+File Permission nek Windows iku agak beda dengan linux,Windows menggunakan sistem **NTFS** dana terdapat beberapa jenis akses yaitu Read,Modify,Write,Execute,Full Control.RWE iku mirip linux tapi iku ketambah **M karo F**.**M** iku iso kaanggo ngedit dan ngehapus file sedangkan seng **F** iku iso ngenggo kabeh permission e
+
+Registry itu seperti database berbentuk tree(pohon) untuk menyimpan berbagai config dan pengaturan user.isinya terdapat key dan value.setiap key mempunyai nama khusus tergantung isi valuenya.dan valuenya bisa berbagai macam jenis mulai dari string,angka,biner.jadi misal ada proses yang membutuhkan recource ,nah itu bisa di ambil di registry  
