@@ -1,19 +1,12 @@
 Belajar:
 
 - Apa itu firewall
-    
 - Fungsi:
-    
-    - allow
-        
-    - block
-        
+    - allow   
+    - block   
 - Konsep:
-    
-    - inbound
-        
-    - outbound
-        
+    - inbound   
+    - outbound    
 - Firewall ≠ antivirus
     
 
