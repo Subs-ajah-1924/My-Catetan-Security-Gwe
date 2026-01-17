@@ -10,3 +10,5 @@ Kalau masih bingung → ulang hari terkait.
 
 Review ringan  
 ❌ Jangan belajar hal baru
+
+Kesimpulan??
