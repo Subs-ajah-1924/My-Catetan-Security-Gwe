@@ -49,3 +49,5 @@ Jenis jenis firewall:
 - Host-Based Firewall = Firewall yang jalan langsung di perangkat(Linux ,Windows)
 - Statefull Firewall = melacak status koneksi
 - Application FIrewall = Fokus ke aplikaisi tertentu(misal web)
+
+ngetes push github nggowo gh 
